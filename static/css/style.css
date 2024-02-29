@@ -5,6 +5,12 @@ p {
     font-size: 15px;
 }
 
+/*Styling level 1 header for fun*/
+h1 {
+    color: darksalmon;
+    font-size 3em;
+}
+
 /*Styling all level 2 headers to pink, underlined, and increase font size*/
 h2 {
     color: #ffc2c2;
@@ -14,14 +20,14 @@ h2 {
 
 /* Styling table to have solid, 2 pixel, yellow border that collapses */
 table {
-    border: 2px solid #fff5cf;
+    border: 4px solid #fff5cf;
     border-collapse: collapse;
 }
 
 /* Special id paragraph that I added to the about-css html file, italicizes and makes color black */
 #special {
     font-style: italic;
-    color: black; /* Rule 2: Set text color */
+    color: black;
 }
 
 /*Custom class rule that makes the font bolded*/
