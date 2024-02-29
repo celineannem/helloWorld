@@ -1,0 +1,37 @@
+/*Styling all paragraphs color to blue and font size to 15*/
+
+p {
+    color: #92a5c2;
+    font-size: 15px;
+}
+
+/*Styling all level 2 headers to pink, underlined, and increase font size*/
+h2 {
+    color: #ffc2c2;
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+/* Styling table to have solid, 2 pixel, yellow border that collapses */
+table {
+    border: 2px solid #fff5cf;
+    border-collapse: collapse;
+}
+
+/* Special id paragraph that I added to the about-css html file, italicizes and makes color black */
+#special {
+    font-style: italic;
+    color: black; /* Rule 2: Set text color */
+}
+
+/*Custom class rule that makes the font bolded*/
+.class-rule {
+    color: #7d8ea7;
+    font-weight: bold;
+}
+
+/* Styles for the image "Smith Logo"*/
+.logo {
+    width: 280px;
+    height: 80px;
+}
