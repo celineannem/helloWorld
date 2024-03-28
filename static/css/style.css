@@ -41,3 +41,42 @@ table {
     width: 280px;
     height: 80px;
 }
+
+/* Enhance the overall form appearance for the favorite-course and contact routes*/
+
+form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* Style for the form submission confirmation */
+.confirmation-message {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #badbcc;
+    margin-top: 20px;
+}
+
+/* Customize submit button*/
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Input field styling */
+input.form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    margin-top: 15px;
+}
+
+/* Improve label visibility */
+label.col-form-label {
+    font-weight: bold;
+}
