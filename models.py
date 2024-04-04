@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+
 db = SQLAlchemy()
 
 class Student(db.Model):
@@ -11,9 +12,10 @@ class Student(db.Model):
     birth_date = db.Column(db.DateTime, nullable=False)
     num_credits_completed = db.Column(db.Integer, nullable=False)
     gpa = db.Column(db.Float, nullable=False)
+    student_email = db.Column(db.VARCHAR(100), nullable=False)
     is_honors = db.Column(db.Boolean, nullable=False)
 
-    def __init__(self, first_name, last_name, major_id, birth_date, is_honors):
+    def __init__(self, first_name, last_name, major_id, birth_date, is_honors, student_email):
         self.first_name = first_name
         self.last_name = last_name
         self.major_id = major_id
@@ -21,9 +23,11 @@ class Student(db.Model):
         self.num_credits_completed = 0
         self.gpa = 0.0
         self.is_honors = is_honors
+        self.student_email = student_email
 
     def __repr__(self):
         return f"{self.first_name} {self.last_name}"
+
 
 class Major(db.Model):
     __tablename__ = "major"
