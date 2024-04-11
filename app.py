@@ -22,13 +22,6 @@ login_manager.init_app(app)
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-@app.route('/training')
-@login_required
-def training():
-    if current_user.role in ['MANAGER', 'ADMIN']:
-        return render_template('training.html')
-    else:
-        return redirect(url_for('login'))
 
 
 @app.route('/')
@@ -227,11 +220,11 @@ def page_not_found(e):
     flash(f'Sorry! You are trying to access a page that does not exist. Please contact support if this problem persists.', 'error')
     return render_template('404.html'), 404
 
+@app.route('/training')
+@login_required
+@role_required(['MANAGER', 'ADMIN'])
+def training():
+    return render_template('training.html')
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
-
-
-
-
-
+    app.run(debug=True)
